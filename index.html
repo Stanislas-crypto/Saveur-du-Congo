@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saveurs du Congo - Restaurant Authentique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Saveurs du Congo</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#accueil" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#apropos" class="nav-link">À Propos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#galerie" class="nav-link">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reservation" class="nav-link reservation-btn">Réserver</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Saveurs Authentiques du Congo</h1>
+            <p class="hero-subtitle">Découvrez la richesse culinaire congolaise dans un cadre chaleureux et convivial</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Découvrir le Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Réserver une Table</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Menu</h2>
+                <p class="section-subtitle">Des plats traditionnels préparés avec amour et authenticité</p>
+            </div>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Tous</button>
+                <button class="category-btn" data-category="entrees">Entrées</button>
+                <button class="category-btn" data-category="plats">Plats Principaux</button>
+                <button class="category-btn" data-category="desserts">Desserts</button>
+                <button class="category-btn" data-category="boissons">Boissons</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Entrées -->
+                <div class="menu-item" data-category="entrees">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Salade de Pondu">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Salade de Pondu</h3>
+                        <p>Feuilles de manioc fraîches assaisonnées aux épices traditionnelles</p>
+                        <span class="price">12€</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="entrees">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Beignets de Banane">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Beignets de Banane</h3>
+                        <p>Beignets croustillants à la banane plantain, servis chauds</p>
+                        <span class="price">8€</span>
+                    </div>
+                </div>
+
+                <!-- Plats Principaux -->
+                <div class="menu-item" data-category="plats">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Poulet Moambé">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Poulet Moambé</h3>
+                        <p>Poulet mijoté dans une sauce aux noix de palme, accompagné de riz</p>
+                        <span class="price">22€</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="plats">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Poisson Salé">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Poisson Salé aux Légumes</h3>
+                        <p>Poisson salé grillé avec légumes du pays et sauce pimentée</p>
+                        <span class="price">25€</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="plats">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Saka Saka">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Saka Saka</h3>
+                        <p>Feuilles de manioc pilées avec viande fumée et poisson séché</p>
+                        <span class="price">20€</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="plats">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/2474659/pexels-photo-2474659.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fufu">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fufu aux Épinards</h3>
+                        <p>Pâte de manioc accompagnée d'épinards et de viande de bœuf</p>
+                        <span class="price">18€</span>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mikate">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Mikate</h3>
+                        <p>Beignets sucrés traditionnels servis avec du miel local</p>
+                        <span class="price">6€</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fruits Tropicaux">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Salade de Fruits Tropicaux</h3>
+                        <p>Mangue, ananas, papaye et fruits de la passion frais</p>
+                        <span class="price">7€</span>
+                    </div>
+                </div>
+
+                <!-- Boissons -->
+                <div class="menu-item" data-category="boissons">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Jus de Gingembre">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Jus de Gingembre</h3>
+                        <p>Boisson rafraîchissante au gingembre frais et citron</p>
+                        <span class="price">5€</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="boissons">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bissap">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Bissap</h3>
+                        <p>Infusion d'hibiscus parfumée à la menthe et au citron vert</p>
+                        <span class="price">4€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Notre Histoire</h2>
+                    <p>Depuis 2015, Saveurs du Congo vous fait découvrir l'authenticité de la cuisine congolaise dans un cadre chaleureux et familial. Notre chef, originaire de Kinshasa, perpétue les traditions culinaires transmises de génération en génération.</p>
+                    <p>Chaque plat est préparé avec des ingrédients soigneusement sélectionnés, importés directement du Congo pour garantir l'authenticité des saveurs. Nous vous invitons à un voyage gustatif unique au cœur de l'Afrique centrale.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Ingrédients Authentiques</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Recettes Traditionnelles</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Ambiance Familiale</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/1640778/pexels-photo-1640778.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chef cuisinant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerie" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galerie</h2>
+                <p class="section-subtitle">Découvrez l'ambiance de notre restaurant</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640779/pexels-photo-1640779.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Intérieur du restaurant">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640780/pexels-photo-1640780.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Plat traditionnel">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640781/pexels-photo-1640781.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Équipe du restaurant">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640782/pexels-photo-1640782.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Terrasse">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640783/pexels-photo-1640783.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cuisine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640784/pexels-photo-1640784.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Événement">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <div class="reservation-content">
+                <div class="reservation-info">
+                    <h2 class="section-title">Réservez Votre Table</h2>
+                    <p>Réservez dès maintenant pour vivre une expérience culinaire inoubliable. Notre équipe vous accueillera dans la plus pure tradition de l'hospitalité congolaise.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+33 1 23 45 67 89</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@saveursducongo.fr</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mar-Dim: 18h00 - 23h00</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="reservation-form" id="reservation-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="guests" name="guests" required>
+                            <option value="">Nombre de personnes</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
+                            <option value="more">Plus de 6 personnes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message (optionnel)" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Réserver</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nous Trouver</h2>
+                <p class="section-subtitle">Venez nous rendre visite dans notre restaurant</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info-detailed">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>123 Rue de la Gastronomie<br>75011 Paris, France</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@saveursducongo.fr</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires</h3>
+                        <p>Mardi - Dimanche<br>18h00 - 23h00<br><small>Fermé le lundi</small></p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Carte interactive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Saveurs du Congo</h3>
+                    <p>Découvrez l'authenticité de la cuisine congolaise dans un cadre chaleureux et convivial.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Rue de la Gastronomie, 75011 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@saveursducongo.fr</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé de nos nouveautés et événements spéciaux.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Saveurs du Congo. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
